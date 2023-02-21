@@ -62,7 +62,7 @@ const characterList = {
         person.class = classMatch ? classMatch : 'Mortal';
 
             // character ID and name
-            const idNameMatch = /href="javascript:SelectItem\('target_id','(\d+)'\)">(.*?)</.exec(charHtml)
+            const idNameMatch = /href="javascript:SelectItem\('target_id', (\d+)\)">(.*?)</.exec(charHtml)
             if (idNameMatch) {
                 person.id = idNameMatch[1];
                 person.name = idNameMatch[2];
@@ -390,7 +390,8 @@ const characterList = {
                 return;
             }
             const charArea = document.getElementsByClassName('charListArea')[0];
-            let peopleMatch = /There (is|are) (\d+) other (person|people) here, (.*)/
+
+            let peopleMatch = /There (is|are) (\d+) other (person|people) here, ([\s\S]*)/
             .exec(charArea.innerHTML);
 
             const locationMatch = /(\d+, \d+ .+?),/.exec(coordArea.innerHTML);
@@ -412,6 +413,7 @@ const characterList = {
             const charHtmls = peopleMatch[4].substring(1, peopleMatch[4].length - 1).split(
                 '>, <');
             const charCount = charHtmls.length;
+
             let personList = [];
 
             // save list of people previously seen on last refresh.
