@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        AnneTrue's Nexus Tweaks
-// @version     3.0.8
+// @version     3.0.9
 // @description Tweaks for Nexus Clash's UI
 // @namespace   https://github.com/AnneTrue/
 // @author      Anne True
@@ -28,7 +28,6 @@
 // @resource    HELLCSS css/HELL.css
 // @require     modules/alchPanel.js
 // @require     modules/bloodhoundFix.js
-// @require     modules/characterList.js
 // @require     modules/charIconSelect.js
 // @require     modules/classifyBadges.js
 // @require     modules/classSpecificTweaks.js
@@ -69,7 +68,6 @@ const nexusTweaks = new NexusTweaksScaffolding(
     `1.7.2.1`
 );
 
-promiseList.push(characterList.module(nexusTweaks));
 promiseList.push(classifyBadges.module(nexusTweaks));
 promiseList.push(descriptionHighlight.module(nexusTweaks));
 promiseList.push(messageStyle.module(nexusTweaks));
