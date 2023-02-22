@@ -20,6 +20,10 @@ const messageStyle = {
             { // Replace '' with ' due to a bug in the game
                 msg: /(\'\')/g, op:'replace', val:"'"
             },
+            { // Timestamps
+                msg: /(\(\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d(\)| \| \d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\)))\.?/,
+                op:'replace', val:'<span class="libTimestamp"> $1</span>'
+            },
         ]
         const messageMatches = [
             {
@@ -136,7 +140,8 @@ const messageStyle = {
             },
             {
                 msg: new RegExp(`(${pfx}You (?:say|whisper|emote), )(".+)`),
-                op: 'pad', val:'libSpeech'
+                op: 'replace',
+                val:'<span class="libSpeech"><span class="libEmote">$1</span>$3</span><br>'
             },
             {
                 msg: new RegExp(`${pfx}((Someone used a|You use your) bullhorn to say: ')`),
