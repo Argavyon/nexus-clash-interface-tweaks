@@ -31,7 +31,8 @@ const improvePetDisplay = {
                 ally: {},
                 faction: {}
             };
-            const petCount = petList.firstChild.textContent.substr(0, petList.firstChild.length - 2);
+            let petCount = petList.firstChild.textContent;
+            petCount = petCount.endsWith(', ') ? petCount.substr(0, petCount.length - 2) : petCount;
             for (const pet of petList.getElementsByTagName('a')) {
                 const alignment = pet.className;
                 const master = pet.title.split('Master: ')[1] ? pet.title.split('Master: ')[1] : ' ';

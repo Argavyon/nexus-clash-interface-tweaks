@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        AnneTrue's Nexus Tweaks
-// @version     3.0.11
+// @version     3.0.12
 // @description Tweaks for Nexus Clash's UI
 // @namespace   https://github.com/AnneTrue/
 // @author      Anne True
