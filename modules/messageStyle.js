@@ -136,8 +136,7 @@ const messageStyle = {
             },
             {
                 msg: new RegExp(`(${pfx}You (?:say|whisper|emote), )(".+)`),
-                op: 'replace',
-                val:'<div class="libSpeech"><span class="libEmote">$1</span>$2</div>'
+                op: 'pad', val:'libSpeech'
             },
             {
                 msg: new RegExp(`${pfx}((Someone used a|You use your) bullhorn to say: ')`),
@@ -145,8 +144,7 @@ const messageStyle = {
             },
             { // broad catch-all emote
                 msg: new RegExp(`(${pfx}<a [^<>]+>[^<>]+</a> [^<>]+?)(".+")(.+)`),
-                op: 'replace',
-                val:'<div class="libSpeech"><span class="libEmote">$1</span>$2<span class="libEmote">$3</span></div>'
+                op:'pad', val:'libEmote'
             },
         ];
 
