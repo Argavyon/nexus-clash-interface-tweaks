@@ -9,8 +9,8 @@
 .libPetHealMe { font-size: smaller; color: #0808aa; padding-left: 4em; }
 .libPetRejuv { font-size: smaller; color: #aa50aa; padding-left: 4em; }
 .libPetDespawn { font-size: smaller; color: #ff8000; padding-left: 4em;}
-.libAttackHit { color: red ! important; }
-.libAttackMiss { color: deeppink; }
+.libAttackHit { color: #118844 ! important; }
+.libAttackMiss { color: #aa0066; }
 .libAttacked { color: red; font-weight: 600; }
 .libAttackedbyEnvironment { color: red; font-weight: 100; }
 .libHealed { color: #0808aa; }
