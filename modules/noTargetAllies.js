@@ -52,7 +52,7 @@ const noTargetAllies = {
             const combatTargetDropdown = document.getElementById('combat_target_id');
             const petTargetDropdown = document.getElementById('pet_target_id');
 
-            const charList = document.querySelector('#AreaDescription .charListArea');
+            const charList = document.querySelector('#OccupantsDescription .charListArea');
             const charListLinks = charList.querySelectorAll('[onclick^="SelectItem"],[href^="javascript:SelectItem"]');
             const charPoliticsDict = {};
             const charNameToId = {};
@@ -94,7 +94,7 @@ const noTargetAllies = {
                 combatTargetDropdown.parentNode.replaceChild(newCombatDropdown, combatTargetDropdown);
 
                 if (noTargetPets && petTargetDropdown) {
-                    const petList = document.querySelector('#AreaDescription .petListArea');
+                    const petList = document.querySelector('#OccupantsDescription .petListArea');
                     const petListLinks = petList.querySelectorAll('[href^="javascript:SelectItem"]');
                     const petPoliticsDict = {};
                     const petNameToId = {};
