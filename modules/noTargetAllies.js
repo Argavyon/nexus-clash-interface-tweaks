@@ -181,8 +181,7 @@ const noTargetAllies = {
                 };
 
                 for (const miscTargetDropdown of miscTargetDropdowns) {
-                    const newMiscDropdown = filteredDropdown(miscTargetDropdown, charPoliticsDict, miscTargetFilter);
-                    miscTargetDropdown.parentNode.replaceChild(newMiscDropdown, miscTargetDropdown);
+                    miscTargetDropdown.innerHTML = filteredDropdown(miscTargetDropdown, charPoliticsDict, miscTargetFilter).innerHTML;
                 }
             }
         }
