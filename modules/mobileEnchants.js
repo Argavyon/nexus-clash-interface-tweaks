@@ -9,7 +9,7 @@ const mobileEnchants = {
 
         const mobileEnchants = () => {
             document.querySelectorAll('span span font[color="#881111"]').forEach(ench => {
-                ench.parentNode.appendChild(document.creteElement('br'));
+                ench.parentNode.appendChild(document.createElement('br'));
                 ench.parentNode.appendChild(document.createTextNode(ench.parentNode.title));
             });
         }

@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        AnneTrue's Nexus Tweaks
-// @version     3.0.14
+// @version     3.0.15
 // @description Tweaks for Nexus Clash's UI
 // @namespace   https://github.com/AnneTrue/
 // @author      Anne True
@@ -10,8 +10,7 @@
 // @source      https://github.com/Argavyon/nexus-clash-interface-tweaks
 // @downloadURL https://github.com/Argavyon/nexus-clash-interface-tweaks/raw/main/nexus-tweaks.user.js
 // @updateURL   https://github.com/Argavyon/nexus-clash-interface-tweaks/raw/main/nexus-tweaks.user.js
-// @match       *://nexusclash.com/clash.php*
-// @match       *://www.nexusclash.com/clash.php*
+// @match       *://*.nexusclash.com/clash.php*
 // @exclude     *?op=map
 // @grant       GM.getValue
 // @grant       GM.setValue
