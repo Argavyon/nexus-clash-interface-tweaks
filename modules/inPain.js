@@ -20,9 +20,11 @@ const inPain = {
         }
 
         const inPain = async () => {
+            mod.API.charinfo.hp = parseInt((document.querySelector('#HP a')?.title?.match(/\d+/)??[])[0]);
+
             if (mod.API.inGame) {
                 if (!await mod.getSetting('in-game')) return;
-                if (mod.API.charinfo && mod.API.charinfo.hp) {
+                if (mod.API.charinfo) {
                     const [R,G,B] = hpToRGB(mod.API.charinfo.hp, mod.API.charinfo.maxhp);
                     document.querySelector('.panel').style.backgroundColor = `rgb(${R}, ${G}, ${B})`;
                 }
@@ -53,5 +55,7 @@ const inPain = {
             'async',
             inPain
         );
+
+        sse.addEventListener("vitals", inPain);
     }
 }
