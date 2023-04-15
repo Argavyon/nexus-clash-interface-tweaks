@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        AnneTrue's Nexus Tweaks
-// @version     3.1.0
+// @version     3.1.1
 // @description Tweaks for Nexus Clash's UI
 // @namespace   https://github.com/AnneTrue/
 // @author      Anne True
@@ -142,6 +142,11 @@ async function main() {
     nexusTweaks.addGlobalStyle(await GM.getResourceUrl('nexusTweaksCSS'));
     
     await Promise.all(promiseList);
+	
+	const messagePane = document.querySelector('#main-left #Messages');
+	if (messagePane) {
+		messagePane.style.justifyContent = messagePane.style.flexDirection === 'column' ? 'flex-start' : 'flex-end';
+	}
     
     nexusTweaks.runNexusTweaks();
     miscTweaks.runNexusTweaks();
