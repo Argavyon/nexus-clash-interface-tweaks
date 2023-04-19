@@ -8,7 +8,7 @@ const messagePaneResize = {
         );
 
         const paneResize = async () => {
-            const messagePane = document.querySelector('#main-left #Messages');
+            const messagePane = document.querySelector('#main-left .pane_messages');
             if (!messagePane) {
                 mod.debug('No message pane found.');
                 return;

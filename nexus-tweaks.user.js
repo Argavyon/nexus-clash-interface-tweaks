@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        AnneTrue's Nexus Tweaks
-// @version     3.1.1
+// @version     3.1.2
 // @description Tweaks for Nexus Clash's UI
 // @namespace   https://github.com/AnneTrue/
 // @author      Anne True
@@ -10,7 +10,8 @@
 // @source      https://github.com/Argavyon/nexus-clash-interface-tweaks
 // @downloadURL https://github.com/Argavyon/nexus-clash-interface-tweaks/raw/main/nexus-tweaks.user.js
 // @updateURL   https://github.com/Argavyon/nexus-clash-interface-tweaks/raw/main/nexus-tweaks.user.js
-// @match       *://*.nexusclash.com/clash.php*
+// @match       *://*nexusclash.com/clash.php*
+// @match       *://*nexusclash.local/clash.php*
 // @exclude     *?op=map
 // @grant       GM.getValue
 // @grant       GM.setValue
@@ -142,11 +143,6 @@ async function main() {
     nexusTweaks.addGlobalStyle(await GM.getResourceUrl('nexusTweaksCSS'));
     
     await Promise.all(promiseList);
-	
-	const messagePane = document.querySelector('#main-left #Messages');
-	if (messagePane) {
-		messagePane.style.justifyContent = messagePane.style.flexDirection === 'column' ? 'flex-start' : 'flex-end';
-	}
     
     nexusTweaks.runNexusTweaks();
     miscTweaks.runNexusTweaks();
