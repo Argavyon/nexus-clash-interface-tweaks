@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        AnneTrue's Nexus Tweaks
-// @version     3.1.2
+// @version     3.2
 // @description Tweaks for Nexus Clash's UI
 // @namespace   https://github.com/AnneTrue/
 // @author      Anne True
@@ -10,8 +10,8 @@
 // @source      https://github.com/Argavyon/nexus-clash-interface-tweaks
 // @downloadURL https://github.com/Argavyon/nexus-clash-interface-tweaks/raw/main/nexus-tweaks.user.js
 // @updateURL   https://github.com/Argavyon/nexus-clash-interface-tweaks/raw/main/nexus-tweaks.user.js
-// @match       *://*nexusclash.com/clash.php*
-// @match       *://*nexusclash.local/clash.php*
+// @match       *://*.nexusclash.com/clash.php*
+// @match       *://*.nexusclash.local/clash.php*
 // @exclude     *?op=map
 // @grant       GM.getValue
 // @grant       GM.setValue
@@ -27,6 +27,7 @@
 // @resource    nexusTweaksCSS css/nexus-tweaks.css
 // @resource    HELLCSS css/HELL.css
 // @require     modules/alchPanel.js
+// @require     modules/betterPickup.js
 // @require     modules/bloodhoundFix.js
 // @require     modules/charIconSelect.js
 // @require     modules/classifyBadges.js
@@ -95,6 +96,7 @@ const minorFixes = new NexusTweaksScaffolding(
     `${GM.info.script.version}`
 );
 
+promiseList.push(betterPickup.module(minorFixes));
 promiseList.push(bloodhoundFix.module(minorFixes));
 promiseList.push(charIconSelect.module(minorFixes));
 promiseList.push(collapseReleased.module(minorFixes));
