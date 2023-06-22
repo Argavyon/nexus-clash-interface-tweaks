@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        AnneTrue's Nexus Tweaks
-// @version     3.2
+// @version     3.3
 // @description Tweaks for Nexus Clash's UI
 // @namespace   https://github.com/AnneTrue/
 // @author      Anne True
@@ -27,6 +27,7 @@
 // @resource    nexusTweaksCSS css/nexus-tweaks.css
 // @resource    HELLCSS css/HELL.css
 // @require     modules/alchPanel.js
+// @require     modules/betterFactionPage.js
 // @require     modules/betterPickup.js
 // @require     modules/bloodhoundFix.js
 // @require     modules/charIconSelect.js
@@ -96,6 +97,7 @@ const minorFixes = new NexusTweaksScaffolding(
     `${GM.info.script.version}`
 );
 
+promiseList.push(betterFactionPage.module(minorFixes));
 promiseList.push(betterPickup.module(minorFixes));
 promiseList.push(bloodhoundFix.module(minorFixes));
 promiseList.push(charIconSelect.module(minorFixes));
