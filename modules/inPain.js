@@ -56,6 +56,8 @@ const inPain = {
             inPain
         );
 
-        sse.addEventListener("vitals", inPain);
+        if (typeof sse !== 'undefined') {
+			sse.addEventListener("vitals", inPain);
+		}
     }
 }

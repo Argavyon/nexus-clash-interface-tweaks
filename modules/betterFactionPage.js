@@ -8,7 +8,7 @@ const betterFactionPage = {
         );
 
         const betterFactionPage = () => {
-			const factionIDmatch = window.location.search.match(/\?op=faction%do=view&id=(\d*)/);
+			const factionIDmatch = window.location.search.match(/\?op=faction&do=view&id=(\d*)/);
             if (!factionIDmatch) {
                 mod.debug('Not on a faction\'s page');
                 return;
