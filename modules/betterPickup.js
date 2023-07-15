@@ -3,7 +3,7 @@ const betterPickup = {
         const mod = await api.registerModule(
             'betterPickup',
             'Better Pickup Dropdown',
-            'local',
+            'global',
             'Sorts and condenses the pickup dropdown.',
         );
 
