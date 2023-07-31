@@ -18,7 +18,7 @@ const improvedPurchaseSkills = {
             for (const tr of purchaseTBody.children) {
                 tr.colSpan = 6;
                 if (!tr.lastElementChild) continue; // Skip empty rows
-                if (tr.lastElementChild.querySelector('input[value="executepurchase"]')) tr.appendChild(document.createElement('td'));
+                if (tr.lastElementChild.querySelector('input[value="purchaseskillspell"]')) tr.appendChild(document.createElement('td'));
                 else if (tr.lastElementChild.querySelector('input[value="buyback"]'));
                 else if (tr.firstChild.colSpan === 5) tr.firstChild.colSpan = 6; // If first colSpan is a header of short colSpan
                 else if (tr.firstChild.colSpan === 6); // If first colSpan is a header of proper colSpan
